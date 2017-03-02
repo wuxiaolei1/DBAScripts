@@ -1,0 +1,1 @@
+LOGMAN STOP DBA_Weekly_PerfCounters

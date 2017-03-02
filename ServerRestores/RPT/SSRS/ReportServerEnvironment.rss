@@ -1,0 +1,277 @@
+Public Sub Main()
+
+  rs.Credentials = System.Net.CredentialCache.DefaultCredentials
+
+  Dim path As String, ds As DataSourceDefinition
+
+  path = "/Data Sources/CommsData"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSDCSPRO1DBA01", Environment & "DCSPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSDCSPRO1DBA01_DCSLive"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSDCSPRO1DBA01", Environment & "DCSPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSDCSPRO1DBA01_SystemsHelpDesk"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSDCSPRO1DBA01", Environment & "DCSPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSDMSPRO1DBA01_DMS"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSDMSPRO1DBA01", Environment & "DMSPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSDMSPRO1DBA01_DMSArchive"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSDMSPRO1DBA01", Environment & "DMSPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSDMSPRO1DBA01_SystemsHelpDesk"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSDMSPRO1DBA01", Environment & "DMSPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSDMSPRO1DBA01-DMS"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSDMSPRO1DBA01", Environment & "DMSPRODBA01")
+  ' ds.UserName = "N/A"
+  ' ds.Password = "N/A"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENDSR1DBA01_DCSLive_SS"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENDSR1DBA01", Environment & "DCSPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENDSR1DBA01_DMS_SS"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENDSR1DBA01", Environment & "DMSPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA02_ClientRetention"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA02", Environment & "GENPRODBA02")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA02_CPD"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA02", Environment & "GENPRODBA02")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA03_CPF_BACS"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA03", Environment & "GENPRODBA03")
+  ' ds.UserName = "N/A"
+  ' ds.Password = "N/A"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA03_CreditReportsAudit"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA03", Environment & "GENPRODBA03")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA03_DROFS"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA03", Environment & "GENPRODBA03")
+  ds.UserName = "CCCSNT\nonlivedrorptservice"
+  ds.Password = "nonlivedrorptservice"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA03_JUTHelpdesk"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA03", Environment & "GENPRODBA03")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA03_SSIS_Config"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA03", Environment & "GENPRODBA03")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA04_Complaints"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA04", Environment & "GENPRODBA04")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA04_Reconciliation"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA04", Environment & "GENPRODBA04")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA04_ShoreTelECC"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA04", Environment & "GENPRODBA04")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSGENPRO1DBA04_WebsiteServices"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSGENPRO1DBA04", Environment & "GENPRODBA04")
+  ds.UserName = "WSSReports"
+  ds.Password = "WSSReports"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSQMTPRO1DBA01_qms"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSQMTPRO1DBA01", Environment & "QMTPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/LDSTCSPRO1DBA01_TCS"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("LDSTCSPRO1DBA01", Environment & "TCSPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/VMMONPRO1DBA02_PerformanceDW"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("VMMONPRO1DBA02", Environment & "MONPRODBA02")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/VMMONPRO1DBA02_SecurityAudit"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("vmmonpro1dba02", Environment & "MONPRODBA02")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/VMMONPRO1DBA02_SQLServerJobPoll"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("VMMONPRO1DBA02", Environment & "MONPRODBA02")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/VMRARPRO1DBA01_TCS"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("VMRARPRO1DBA01", Environment & "RARPRODBA01")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/VMWEBPRO1DBA02_CWS"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("VMWEBPRO1DBA02", Environment & "WEBPRODBA02")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/VMWEBPRO1DBA03_DebtRemedy_Live"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("VMWEBPRO1DBA03", Environment & "WEBPRODBA03").Replace("VMWEBDSR1DBA02", Environment & "WEBDSRDBA02")
+  ds.UserName = "ReportingServices"
+  ds.Password = "ReportingServices"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  path = "/Data Sources/WebSeriesAPI"
+  ds = rs.GetDataSourceContents(path)
+  ds.ConnectString = ds.ConnectString.Replace("ddebroker/dde.asmx", Environment.Replace("VM", "ev") & "ddebroker/dde.asmx")
+  ' ds.UserName = "N/A"
+  ' ds.Password = "N/A"
+  rs.SetDataSourceContents(path, ds)
+  DebugContents(path, ds)
+
+  ''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  'Add CCCSNT\Domain Users to Browser role on all items'
+  ''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+  Dim policy As New Policy
+  policy.GroupUserName = "CCCSNT\Domain Users"
+  Dim role As New Role
+  role.Name = "Browser"
+  policy.Roles = New Role() {role}
+  Dim policies As Policy() = New Policy() {policy}
+
+  Dim items As CatalogItem() = Nothing
+  items = rs.ListChildren("/", True)
+  Dim item As CatalogItem
+  For Each item In items
+    If Not item.Path.StartsWith("/Data Sources") Then rs.SetPolicies(item.Path, policies)
+    Console.WriteLine(item.Path)
+  Next
+
+End Sub
+
+Public Sub DebugContents(ByVal path As String, ByRef ds As DataSourceDefinition)
+
+  Console.WriteLine("Path = " & path)
+  Console.WriteLine("ConnectString = " & ds.ConnectString)
+  Console.WriteLine("CredentialRetrieval = " & ds.CredentialRetrieval)
+  Console.WriteLine("Enabled = " & ds.Enabled)
+  Console.WriteLine("EnabledSpecified = " & ds.EnabledSpecified)
+  Console.WriteLine("Extension = " & ds.Extension)
+  Console.WriteLine("ImpersonateUser = " & ds.ImpersonateUser)
+  Console.WriteLine("ImpersonateUserSpecified = " & ds.ImpersonateUserSpecified)
+  Console.WriteLine("OriginalConnectStringExpressionBased = " & ds.OriginalConnectStringExpressionBased)
+  Console.WriteLine("Prompt = " & ds.Prompt)
+  Console.WriteLine("UseOriginalConnectString = " & ds.UseOriginalConnectString)
+  Console.WriteLine("UserName = " & ds.UserName)
+  Console.WriteLine("WindowsCredentials = " & ds.WindowsCredentials)
+  Console.WriteLine("")
+
+End Sub

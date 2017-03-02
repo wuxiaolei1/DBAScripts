@@ -1,0 +1,1 @@
+LOGMAN START DBA_Weekly_PerfCounters
